@@ -101,7 +101,7 @@ XML3D.POI.prototype.addPOI = function ( poi_id, poi_data )
 	// console.log(poi_data);
 	
 	var id = this.idGen++;
-	
+
 	var loc = poi_data.fw_core.location.wgs84;
 	var typeName = this.deriveTypeName(poi_data.fw_core.category);
 	if (typeName === null)
@@ -121,17 +121,17 @@ XML3D.POI.prototype.addPOI = function ( poi_id, poi_data )
 	m.setAttribute("id", "poi_" + poi_id);
 	m.setAttribute("src", "#asset_" + typeName);
 	m.setAttribute("transform", "#poi_tf_" + poi_id);
-	m.setAttribute("ondblclick", "alert('Hello World!');");
+	m.setAttribute("ondblclick", "alert('" + poi_data.fw_core.category + "');");
 
 	this.group.appendChild(m);
 }
 
 XML3D.POI.prototype.deriveTypeName = function(category)
 {
-	if (category == "cafe")
+	if (category == "cafe" || category == "restaurant" || category == "fast_food")
 		return "cafe";
 	
-	return null;
+    return "hint";
 }
 
 XML3D.POI.prototype.animate = function(delta)
