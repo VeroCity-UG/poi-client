@@ -92,6 +92,13 @@ div.description {
 	margin-left: 20px;
 }
 
+div.description .howto {
+    display: inline-block;
+    width: 540px;
+    vertical-align: top;
+    text-align: justify;
+}
+
 div.description .title {
 	font-size: 20px;
 	font-weight: bold;
