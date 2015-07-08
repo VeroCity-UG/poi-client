@@ -2,15 +2,9 @@
 var global = {
 
 	"api": {
-		"poi": "http://130.206.80.175/api/poi/bbox_search", // "dummy/sample-data.json", // 
-		"img_tiles": "http://130.206.80.175/api/tiles/filab/${z}/${x}/${y}.png",
+		"poi": "http://[$DATA_PROVIDER_HOST]/poi_dp/bbox_search",
 		"ground_tiles": {
-			"osmde": "http://130.206.80.175/api/3d-map-tiles/filab",
-			"gis": "http://130.206.80.175/api/3d-map-tiles/oulu",
-			"sb": "http://130.206.80.175/api/3d-map-tiles/sb",
-			"static-sb": "data/static-sb",
-			"tum": "http://130.206.80.175/api/3d-map-tiles/tum",
-			"static-tum": "data/static-tum"
+			"gis": "http://[$3D_MAP_TILES_HOST]/api/3d-map-tiles/oulu"
 		}
 	}
 };
